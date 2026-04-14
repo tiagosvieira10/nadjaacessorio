@@ -1,6 +1,6 @@
-import { X, MessageCircle } from "lucide-react";
-import { Product, formatPrice, getWhatsAppLink } from "@/data/products";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Product, getWhatsAppLink } from "@/data/products";
+import { MessageCircle, X } from "lucide-react";
 
 interface ProductModalProps {
   product: Product | null;
@@ -40,9 +40,6 @@ const ProductModal = ({ product, open, onClose }: ProductModalProps) => {
             <h2 className="text-display text-3xl md:text-4xl font-medium text-foreground mb-2">
               {product.name}
             </h2>
-            <p className="text-display text-2xl text-gold mb-6">
-              {formatPrice(product.price)}
-            </p>
             <p className="text-body text-sm text-muted-foreground leading-relaxed mb-8">
               {product.description}
             </p>

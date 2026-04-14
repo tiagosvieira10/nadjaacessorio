@@ -1,4 +1,4 @@
-import heroBanner from "@/assets/hero-banner.jpg";
+import heroBanner from "@/assets/hero-banner (1).jpg";
 
 const Hero = () => {
   const scrollTo = (id: string) => {
@@ -21,14 +21,14 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 md:px-12">
         <div className="max-w-xl animate-fade-up">
           <p className="text-body text-xs md:text-sm tracking-[0.3em] uppercase text-primary-foreground/80 mb-4">
-            Nossa Coleção
+            Najda Cardozo Acessórios
           </p>
           <h1 className="text-display text-4xl md:text-6xl lg:text-7xl font-light text-primary-foreground leading-tight mb-6">
-            Elegância em{" "}
-            <span className="italic font-light">cada detalhe</span>
+            Seu estilo,{" "}
+            <span className="italic font-light">sua escolha</span>
           </h1>
           <p className="text-body text-sm md:text-base text-primary-foreground/80 mb-8 max-w-md leading-relaxed">
-            Descubra a bolsa que se encaixa perfeitamente no seu dia a dia ou nas ocasiões mais especiais.
+            Bolsas, mochilas, carteiras e vários acessórios pra todos os momentos do seu dia a dia
           </p>
           <button
             onClick={() => scrollTo("catalogo")}

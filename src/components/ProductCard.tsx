@@ -1,4 +1,4 @@
-import { Product, formatPrice } from "@/data/products";
+import { Product } from "@/data/products";
 
 interface ProductCardProps {
   product: Product;
@@ -29,9 +29,6 @@ const ProductCard = ({ product, onSelect }: ProductCardProps) => {
       <h3 className="text-display text-lg md:text-xl font-medium text-foreground mb-1">
         {product.name}
       </h3>
-      <p className="text-body text-sm text-muted-foreground">
-        {formatPrice(product.price)}
-      </p>
     </div>
   );
 };

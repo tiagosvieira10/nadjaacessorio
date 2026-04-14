@@ -1,17 +1,10 @@
-import bagBackpack1 from "@/assets/bag-backpack-1.jpg";
-import bagBucket1 from "@/assets/bag-bucket-1.jpg";
-import bagClutch1 from "@/assets/bag-clutch-1.jpg";
-import bagCrossbody1 from "@/assets/bag-crossbody-1.jpg";
-import bagShoulder1 from "@/assets/bag-shoulder-1.jpg";
-import bagTote1 from "@/assets/bag-tote-1.jpg";
-import bagWallet1 from "@/assets/bag-wallet-1.jpg";
+import * as P from "../assets/products";
 
-export type Category = "todas" | "bolsas" | "mochilas" | "carteiras" | "clutches";
+export type Category = "todas" | "bolsas" | "mochilas" | "carteiras" | "malas";
 
 export interface Product {
   id: string;
   name: string;
-  price: number;
   description: string;
   image: string;
   category: Category;
@@ -23,71 +16,337 @@ export const categories: { value: Category; label: string }[] = [
   { value: "bolsas", label: "Bolsas" },
   { value: "mochilas", label: "Mochilas" },
   { value: "carteiras", label: "Carteiras" },
-  { value: "clutches", label: "Clutches" },
+  { value: "malas", label: "Malas" },
 ];
 
 export const products: Product[] = [
   {
     id: "1",
-    name: "Bolsa Tote Milano",
-    price: 489.9,
-    description: "Bolsa tote em couro legítimo com acabamento premium. Espaçosa e elegante, perfeita para o dia a dia com sofisticação. Forro interno em tecido acetinado com bolsos organizadores.",
-    image: bagTote1,
-    category: "bolsas",
+    name: "Kit de Malas Premium",
+    description: "Conjunto completo de malas de viagem em diferentes tamanhos. Design rígido com rodas 360º para máxima durabilidade e conforto em suas jornadas.",
+    image: P.img1,
+    category: "malas",
     featured: true,
   },
   {
     id: "2",
-    name: "Crossbody Noir",
-    price: 359.9,
-    description: "Bolsa crossbody em couro preto com detalhes em metal dourado. Design compacto e versátil, ideal para looks casuais e noturnos. Alça ajustável e fecho com zíper.",
-    image: bagCrossbody1,
-    category: "bolsas",
-    featured: true,
-  },
-  {
-    id: "3",
-    name: "Shoulder Bag Caramelo",
-    price: 429.9,
-    description: "Bolsa de ombro em couro caramelo com design atemporal. Acabamento artesanal e ferragens em ouro velho. Comporta itens essenciais com elegância.",
-    image: bagShoulder1,
-    category: "bolsas",
-    featured: true,
-  },
-  {
-    id: "4",
-    name: "Clutch Dourada Gala",
-    price: 279.9,
-    description: "Clutch em couro metalizado dourado, perfeita para eventos especiais. Fecho magnético com acabamento premium. Acompanha corrente removível.",
-    image: bagClutch1,
-    category: "clutches",
-    featured: true,
-  },
-  {
-    id: "5",
-    name: "Mochila Urban Cream",
-    price: 399.9,
-    description: "Mochila feminina em couro off-white com zíperes dourados. Design moderno e funcional com compartimentos internos. Ideal para trabalho e lazer.",
-    image: bagBackpack1,
+    name: "Kit Mochilas Adventure",
+    description: "Conjunto de mochilas versáteis para trilhas ou uso escolar. Material resistente com diversos compartimentos externos para organização rápida.",
+    image: P.img2,
     category: "mochilas",
     featured: false,
   },
   {
+    id: "3",
+    name: "Mochila de Bordo Reforçada",
+    description: "Mochila robusta ideal para viagens curtas. Possui alças acolchoadas e material impermeável de alta resistência na cor marrom texturizada.",
+    image: P.img3,
+    category: "mochilas",
+    featured: false,
+  },
+  {
+    id: "4",
+    name: "Bolsas Transversais Pastel",
+    description: "Linha de bolsas compactas em tons pastéis. Design moderno em formato meia-lua, ideal para carregar o essencial com leveza.",
+    image: P.img4,
+    category: "bolsas",
+    featured: false,
+  },
+  {
+    id: "5",
+    name: "Bolsa Shoulder Fashion",
+    description: "Bolsa de ombro elegante em tom creme. Combina perfeitamente com looks casuais finos e ambientes de trabalho.",
+    image: P.img5,
+    category: "bolsas",
+    featured: false,
+  },
+  {
+    id: "41",
+    name: "Bolsa Couro Fashion",
+    description: "Bolsa de ombro elegante em marrom. Combina perfeitamente com looks casuais finos e ambientes de trabalho.",
+    image: P.img41,
+    category: "bolsas",
+    featured: true,
+  },
+  {
     id: "6",
-    name: "Carteira Rosé Minimal",
-    price: 189.9,
-    description: "Carteira compacta em couro rosé com acabamento soft touch. Compartimentos para cartões, documentos e moedas. Fechamento com zíper premium.",
-    image: bagWallet1,
-    category: "carteiras",
+    name: "Mala de Mão Esportiva",
+    description: "Mala de mão bicolor, perfeita para academia ou viagens de fim de semana. Leve, espaçosa e com alça transversal opcional.",
+    image: P.img6,
+    category: "bolsas",
     featured: false,
   },
   {
     id: "7",
-    name: "Bucket Bag Terracota",
-    price: 459.9,
-    description: "Bolsa bucket em couro terracota com cordão ajustável. Inspiração artesanal com detalhes em metal dourado. Interior espaçoso e forrado.",
-    image: bagBucket1,
+    name: "Mini Bags Collection",
+    description: "Coleção de mini bolsas transversais em couro sintético. Diversas cores para combinar com qualquer estilo urbano.",
+    image: P.img7,
     category: "bolsas",
+    featured: false,
+  },
+  {
+    id: "8",
+    name: "Carteiras Retangulares Slim",
+    description: "Carteiras com design estruturado e cores sóbrias. Perfeitas para organizar documentos e itens pessoais de forma discreta.",
+    image: P.img8,
+    category: "bolsas",
+    featured: true,
+  },
+  {
+    id: "9",
+    name: "Mochila Escolar Pink",
+    description: "Mochila juvenil em tom de rosa vibrante. Inclui estojo e compartimentos internos para material escolar ou notebook.",
+    image: P.img9,
+    category: "mochilas",
+    featured: false,
+  },
+  {
+    id: "10",
+    name: "Colete Tático Chest Bag",
+    description: "Pochete de peito com múltiplos bolsos utilitários. Estilo streetwear tático, ideal para esportes radicais ou festivais.",
+    image: P.img10,
+    category: "bolsas",
+    featured: false,
+  },
+  {
+    id: "11",
+    name: "Bolsa Sling Utilitária",
+    description: "Bolsa transversal compacta com detalhes refletivos e ganchos externos. Alta funcionalidade para o dia a dia agitado.",
+    image: P.img11,
+    category: "bolsas",
+    featured: false,
+  },
+  {
+    id: "12",
+    name: "Pochete de Perna Hunter",
+    description: "Bolsa tática de fixação na coxa e cintura. Excelente para motociclistas ou atividades ao ar livre que exigem mãos livres.",
+    image: P.img12,
+    category: "bolsas",
+    featured: false,
+  },
+  {
+    id: "13",
+    name: "Kit Transversais Modern",
+    description: "Trio de bolsas compactas com design contemporâneo. Foco em praticidade e segurança para itens de valor.",
+    image: P.img13,
+    category: "bolsas",
+    featured: false,
+  },
+  {
+    id: "14",
+    name: "Duffel Bag Black",
+    description: "Mala de mão preta clássica em tecido de nylon reforçado. Versátil para qualquer ocasião, do treino ao embarque.",
+    image: P.img14,
+    category: "malas",
+    featured: false,
+  },
+  {
+    id: "15",
+    name: "Duffel Bag Navy",
+    description: "Mala de mão azul marinho com alças reforçadas. Design limpo e material de fácil higienização.",
+    image: P.img15,
+    category: "malas",
+    featured: false,
+  },
+  {
+    id: "16",
+    name: "Necessaire Bubble Pink",
+    description: "Bolsa de mão acolchoada em cor vibrante. Perfeita para cosméticos ou como organizador interno de bolsas maiores.",
+    image: P.img16,
+    category: "carteiras",
+    featured: false,
+  },
+  {
+    id: "17",
+    name: "Mochila Office Grey",
+    description: "Mochila executiva cinza com proteção para notebook. Visual profissional e compartimentos acolchoados.",
+    image: P.img17,
+    category: "mochilas",
+    featured: false,
+  },
+  {
+    id: "18",
+    name: "Mochila Tech Blue",
+    description: "Mochila ergonômica na cor azul. Ideal para estudantes e profissionais que carregam dispositivos eletrônicos.",
+    image: P.img18,
+    category: "mochilas",
+    featured: false,
+  },
+  {
+    id: "19",
+    name: "Estojo Organizador Pro",
+    description: "Organizador de acessórios e canetas com múltiplos elásticos internos. Mantém tudo em ordem dentro da sua mochila.",
+    image: P.img19,
+    category: "carteiras",
+    featured: false,
+  },
+  {
+    id: "20",
+    name: "Mochila Casual Black",
+    description: "Mochila preta minimalista para o cotidiano. Alças ajustáveis e design que combina com qualquer vestimenta.",
+    image: P.img20,
+    category: "mochilas",
+    featured: false,
+  },
+  {
+    id: "21",
+    name: "Mochila Urban Brown",
+    description: "Mochila em tom marrom café. Estilo casual urbano com fechamento em zíper duplo e bolsos laterais.",
+    image: P.img21,
+    category: "mochilas",
+    featured: false,
+  },
+  {
+    id: "22",
+    name: "Kit Pochetes Street",
+    description: "Pochetes em cores terrosas para uso na cintura ou transversal. Estilo e segurança para seus objetos pessoais.",
+    image: P.img22,
+    category: "bolsas",
+    featured: false,
+  },
+  {
+    id: "23",
+    name: "Bolsa Porta-Celular Tabaco",
+    description: "Carteira transversal específica para smartphone. Inclui slots para cartões e alça fina elegante.",
+    image: P.img23,
+    category: "carteiras",
+    featured: false,
+  },
+  {
+    id: "24",
+    name: "Kit Carteiras e Clutches",
+    description: "Conjunto variado de carteiras de mão em tons neutros. Texturas diversas para todas as ocasiões.",
+    image: P.img24,
+    category: "carteiras",
+    featured: false,
+  },
+  {
+    id: "25",
+    name: "Mochila Executive Wine",
+    description: "Mochila em tom de vinho profundo. Combina sofisticação com a funcionalidade de uma mochila de alta capacidade.",
+    image: P.img25,
+    category: "mochilas",
+    featured: false,
+  },
+  {
+    id: "26",
+    name: "Kit Malas de Viagem Blue",
+    description: "Conjunto de malas azuis com detalhes em laranja. Fácil identificação na esteira e muito espaço interno.",
+    image: P.img26,
+    category: "malas",
+    featured: false,
+  },
+  {
+    id: "27",
+    name: "Bolsa Matelassê Dark",
+    description: "Bolsa de mão com acabamento costurado estilo matelassê. Visual clássico e elegante para eventos casuais.",
+    image: P.img27,
+    category: "bolsas",
+    featured: false,
+  },
+  {
+    id: "28",
+    name: "Pochetes Esportivas Neon",
+    description: "Kit de pochetes em cores neon para alta visibilidade. Ideais para corridas, ciclismo ou caminhadas noturnas.",
+    image: P.img28,
+    category: "bolsas",
+    featured: false,
+  },
+  {
+    id: "29",
+    name: "Kit Travel Organizer",
+    description: "Conjunto de malas flexíveis em diversas cores. Ideal para organizar grupos de viagem ou diferentes tipos de bagagem.",
+    image: P.img29,
+    category: "malas",
+    featured: false,
+  },
+  {
+    id: "30",
+    name: "Sling Bag Grey Utility",
+    description: "Bolsa transversal cinza com carregamento frontal. Prática para acesso rápido a documentos e eletrônicos.",
+    image: P.img30,
+    category: "bolsas",
+    featured: false,
+  },
+  {
+    id: "31",
+    name: "Bolsa de Mão Marrom Lux",
+    description: "Bolsa estruturada com alças de mão rígidas. Acabamento impecável em couro sintético premium.",
+    image: P.img31,
+    category: "bolsas",
+    featured: false,
+  },
+  {
+    id: "32",
+    name: "Bolsa Transversal Off-White",
+    description: "Bolsa pequena na cor marfim com detalhes em dourado. O equilíbrio perfeito entre o discreto e o luxuoso.",
+    image: P.img32,
+    category: "bolsas",
+    featured: false,
+  },
+  {
+    id: "33",
+    name: "Bolsa Envelope Silver",
+    description: "Bolsa em formato envelope com textura brilhante. Ideal para festas, casamentos e eventos formais.",
+    image: P.img33,
+    category: "bolsas",
+    featured: false,
+  },
+  {
+    id: "34",
+    name: "Carteira de Pulso Black",
+    description: "Carteira compacta com alça de segurança para o pulso. Praticidade extrema para o dia a dia.",
+    image: P.img34,
+    category: "carteiras",
+    featured: false,
+  },
+  {
+    id: "35",
+    name: "Porta-Celular Classic Brown",
+    description: "Case transversal para celular em tom marrom clássico. Design minimalista que protege seu aparelho com estilo.",
+    image: P.img35,
+    category: "carteiras",
+    featured: false,
+  },
+  {
+    id: "36",
+    name: "Bolsa Tote Minimalista",
+    description: "Bolsa ampla e limpa para quem busca simplicidade. Grande espaço interno sem divisórias externas.",
+    image: P.img36,
+    category: "bolsas",
+    featured: true,
+  },
+
+  {
+    id: "37",
+    name: "Kit Maleta Executiva Pro",
+    description: "Conjunto de maletas para notebook e documentos. Material de alta resistência com compartimentos acolchoados para proteção total de eletrônicos.",
+    image: P.img37,
+    category: "bolsas",
+    featured: false,
+  },
+  {
+    id: "38",
+    name: "Coleção Tote Candy Colors",
+    description: "Variedade de bolsas de mão em tons suaves. Design compacto e estruturado, ideal para compor looks leves e femininos.",
+    image: P.img38,
+    category: "bolsas",
+    featured: false,
+  },
+  {
+    id: "39",
+    name: "Sling Bag Impermeável",
+    description: "Bolsa transversal com tecnologia repelente à água. Design ergonômico e minimalista, focada em praticidade para o uso urbano intenso.",
+    image: P.img39,
+    category: "bolsas",
+    featured: false,
+  },
+  {
+    id: "40",
+    name: "Kit Duffel Sport Mint",
+    description: "Malas esportivas em design moderno com detalhes em tom menta. Inclui compartimento para calçados e material respirável.",
+    image: P.img40,
+    category: "malas",
     featured: false,
   },
 ];
@@ -96,14 +355,7 @@ export const WHATSAPP_NUMBER = "558796112405";
 
 export function getWhatsAppLink(productName: string): string {
   const message = encodeURIComponent(
-    `Olá, tenho interesse na bolsa ${productName}. Poderia me enviar mais informações?`
+    `Olá, tenho interesse na ${productName}. Poderia me enviar mais informações?`
   );
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
-}
-
-export function formatPrice(price: number): string {
-  return price.toLocaleString("pt-BR", {
-    style: "currency",
-    currency: "BRL",
-  });
 }

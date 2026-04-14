@@ -1,4 +1,4 @@
-import { Instagram, Mail } from "lucide-react";
+import { Instagram, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
           <div>
             <h3 className="text-display text-2xl font-semibold tracking-wider mb-4">Nadja Cardozo</h3>
             <p className="text-body text-sm text-primary-foreground/60 leading-relaxed">
-              Elegância e sofisticação em cada peça. Bolsas que traduzem seu estilo com autenticidade.
+                Bolsas, mochilas, carteiras e vários acessórios pra todos os momentos do seu dia a dia
             </p>
           </div>
 
@@ -31,8 +31,8 @@ const Footer = () => {
               <a href="https://www.instagram.com/nadjadeborahcardozo" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
-              <a href="mailto:contato@maison.com" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors" aria-label="E-mail">
-                <Mail size={20} />
+              <a href="https://wa.me/5587996112405?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos." target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors" aria-label="WhatsApp">
+                <MessageCircle size={20} />
               </a>
             </div>
           </div>
