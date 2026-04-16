@@ -1,4 +1,6 @@
 import { Product } from "@/data/products";
+import { getShareWhatsAppLink } from "@/lib/share";
+import { Share2 } from "lucide-react";
 
 interface ProductCardProps {
   product: Product;
@@ -6,12 +8,15 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ product, onSelect }: ProductCardProps) => {
+  const productUrl = `${window.location.origin}/produto/${product.id}`;
+  const shareLink = getShareWhatsAppLink(product.name, product.image, productUrl);
+
   return (
-    <div
-      className="group cursor-pointer product-card-hover"
-      onClick={() => onSelect(product)}
-    >
-      <div className="relative overflow-hidden bg-card mb-4">
+    <div className="group product-card-hover">
+      <div
+        className="relative overflow-hidden bg-card mb-4 cursor-pointer"
+        onClick={() => onSelect(product)}
+      >
         <img
           src={product.image}
           alt={product.name}
@@ -26,11 +31,26 @@ const ProductCard = ({ product, onSelect }: ProductCardProps) => {
           </span>
         </div>
       </div>
-      <h3 className="text-display text-lg md:text-xl font-medium text-foreground mb-1">
-        {product.name}
-      </h3>
+      <div className="flex items-start justify-between gap-2">
+        <div className="cursor-pointer" onClick={() => onSelect(product)}>
+          <h3 className="text-display text-lg md:text-xl font-medium text-foreground">
+            {product.name}
+          </h3>
+        </div>
+        <a
+          href={shareLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          className="mt-1 text-muted-foreground hover:text-foreground transition-colors shrink-0"
+          aria-label="Compartilhar no WhatsApp"
+        >
+          <Share2 size={16} />
+        </a>
+      </div>
     </div>
   );
 };
 
 export default ProductCard;
+

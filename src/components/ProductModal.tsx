@@ -1,6 +1,7 @@
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Product, getWhatsAppLink } from "@/data/products";
-import { MessageCircle, X } from "lucide-react";
+import { getShareWhatsAppLink } from "@/lib/share";
+import { MessageCircle, Share2 } from "lucide-react";
 
 interface ProductModalProps {
   product: Product | null;
@@ -19,7 +20,7 @@ const ProductModal = ({ product, open, onClose }: ProductModalProps) => {
           className="absolute right-4 top-4 z-10 text-muted-foreground hover:text-foreground transition-colors"
           aria-label="Fechar"
         >
-          <X size={24} />
+          {/* <X size={24} /> */}
         </button>
 
         <div className="grid grid-cols-1 md:grid-cols-2">
@@ -37,7 +38,7 @@ const ProductModal = ({ product, open, onClose }: ProductModalProps) => {
             <p className="text-body text-xs tracking-[0.2em] uppercase text-muted-foreground mb-3">
               {product.category}
             </p>
-            <h2 className="text-display text-3xl md:text-4xl font-medium text-foreground mb-2">
+            <h2 className="text-display text-3xl md:text-4xl font-medium text-foreground mb-6">
               {product.name}
             </h2>
             <p className="text-body text-sm text-muted-foreground leading-relaxed mb-8">
@@ -53,6 +54,16 @@ const ProductModal = ({ product, open, onClose }: ProductModalProps) => {
               <MessageCircle size={20} />
               Falar no WhatsApp
             </a>
+
+            <a
+              href={getShareWhatsAppLink(product.name, product.image, `${window.location.origin}/produto/${product.id}`)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 text-sm tracking-wider uppercase px-6 py-3 border border-border text-foreground hover:bg-accent transition-colors mt-3"
+            >
+              <Share2 size={20} />
+              Compartilhar
+            </a>
           </div>
         </div>
       </DialogContent>
@@ -61,3 +72,4 @@ const ProductModal = ({ product, open, onClose }: ProductModalProps) => {
 };
 
 export default ProductModal;
+
