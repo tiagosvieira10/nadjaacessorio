@@ -46,7 +46,10 @@ const ProductModal = ({ product, open, onClose }: ProductModalProps) => {
             </p>
 
             <a
-              href={getWhatsAppLink(product.name)}
+              href={getWhatsAppLink(
+                product.name, 
+                `${window.location.origin}/produto/${product.id}`
+                )}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp inline-flex items-center justify-center gap-3 text-sm tracking-wider uppercase"

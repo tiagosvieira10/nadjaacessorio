@@ -353,9 +353,13 @@ export const products: Product[] = [
 
 export const WHATSAPP_NUMBER = "558796112405";
 
-export function getWhatsAppLink(productName: string): string {
+export function getWhatsAppLink(
+  productName: string,
+  productUrl: string
+): string {
   const message = encodeURIComponent(
-    `Olá, tenho interesse na ${productName}. Poderia me enviar mais informações?`
+    `Olá! Tenho interesse na ${productName} 😍\n\nPoderia me enviar mais informações?\n\n👉 ${productUrl}`
   );
+
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
 }

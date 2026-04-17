@@ -27,7 +27,7 @@ const ProductPage = () => {
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-6 md:px-12">
           <a
-            href="/"
+          href=""
             onClick={() => navigate(-1)}
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 text-sm tracking-wider uppercase"
           >
@@ -59,7 +59,10 @@ const ProductPage = () => {
 
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
-                  href={getWhatsAppLink(product.name)}
+                  href={getWhatsAppLink(
+                      product.name, 
+                      `${window.location.origin}/produto/${product.id}`
+                    )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-whatsapp inline-flex items-center justify-center gap-3 text-sm tracking-wider uppercase"
