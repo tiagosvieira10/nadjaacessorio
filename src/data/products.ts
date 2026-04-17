@@ -46,10 +46,10 @@ export const products: Product[] = [
   },
   {
     id: "4",
-    name: "Bolsas Transversais Pastel",
+    name: "Carteiras Transversais Pastel",
     description: "Linha de bolsas compactas em tons pastéis. Design moderno em formato meia-lua, ideal para carregar o essencial com leveza.",
     image: P.img4,
-    category: "bolsas",
+    category: "carteiras",
     featured: false,
   },
   {
@@ -78,10 +78,10 @@ export const products: Product[] = [
   },
   {
     id: "7",
-    name: "Mini Bags Collection",
+    name: "Carteiras Collection",
     description: "Coleção de mini bolsas transversais em couro sintético. Diversas cores para combinar com qualquer estilo urbano.",
     image: P.img7,
-    category: "bolsas",
+    category: "carteiras",
     featured: false,
   },
   {
@@ -150,8 +150,8 @@ export const products: Product[] = [
   },
   {
     id: "16",
-    name: "Necessaire Bubble Pink",
-    description: "Bolsa de mão acolchoada em cor vibrante. Perfeita para cosméticos ou como organizador interno de bolsas maiores.",
+    name: "Estojo Box",
+    description: "Estojo box acolchoada em cor vibrante. Perfeita para cosméticos ou como organizador interno de bolsas maiores.",
     image: P.img16,
     category: "carteiras",
     featured: false,
@@ -230,16 +230,16 @@ export const products: Product[] = [
   },
   {
     id: "26",
-    name: "Kit Malas de Viagem Blue",
-    description: "Conjunto de malas azuis com detalhes em laranja. Fácil identificação na esteira e muito espaço interno.",
+    name: "Bolsa Térmica",
+    description: "Conjunto de bolsas térmicas. Perfeitas para transportar alimentos e bebidas mantendo a temperatura ideal. Design prático e moderno para o dia a dia.",
     image: P.img26,
-    category: "malas",
+    category: "bolsas",
     featured: false,
   },
   {
     id: "27",
     name: "Bolsa Matelassê Dark",
-    description: "Bolsa de mão com acabamento costurado estilo matelassê. Visual clássico e elegante para eventos casuais.",
+    description: "Bolsa de mão com acabamento costurado estilo matelassê. Visual clássico e elegante",
     image: P.img27,
     category: "bolsas",
     featured: false,
@@ -310,10 +310,10 @@ export const products: Product[] = [
   },
   {
     id: "36",
-    name: "Bolsa Tote Minimalista",
+    name: "Mochila 3 opções de uso",
     description: "Bolsa ampla e limpa para quem busca simplicidade. Grande espaço interno sem divisórias externas.",
     image: P.img36,
-    category: "bolsas",
+    category: "mochilas",
     featured: true,
   },
 
@@ -347,6 +347,14 @@ export const products: Product[] = [
     description: "Malas esportivas em design moderno com detalhes em tom menta. Inclui compartimento para calçados e material respirável.",
     image: P.img40,
     category: "malas",
+    featured: false,
+  },
+  {
+    id: "42",
+    name: "Mochila térmica",
+    description: "Mochila termica em material resistente e fácil de limpar. Ideal para transportar alimentos e bebidas mantendo a temperatura ideal. Design prático e moderno para o dia a dia.",
+    image: P.img42,
+    category: "mochilas",
     featured: false,
   },
 ];

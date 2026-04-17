@@ -34,6 +34,7 @@ export { default as img39 } from './39.jpg';
 export { default as img4 } from './4.jpg';
 export { default as img40 } from './40.jpg';
 export { default as img41 } from './41.jpg';
+export { default as img42 } from './42.jpg';
 export { default as img5 } from './5.jpg';
 export { default as img6 } from './6.jpg';
 export { default as img7 } from './7.jpg';
