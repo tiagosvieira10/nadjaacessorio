@@ -21,7 +21,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 md:px-12">
         <div className="max-w-xl animate-fade-up">
           <p className="text-body text-xs md:text-sm tracking-[0.3em] uppercase text-primary-foreground/80 mb-4">
-            Najda Cardozo Acessórios
+            Nadja Cardozo Acessórios
           </p>
           <h1 className="text-display text-4xl md:text-6xl lg:text-7xl font-light text-primary-foreground leading-tight mb-6">
             Seu estilo,{" "}

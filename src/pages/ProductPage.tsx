@@ -26,13 +26,14 @@ const ProductPage = () => {
       <Header />
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-6 md:px-12">
-          <button
+          <a
+            href="/"
             onClick={() => navigate(-1)}
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 text-sm tracking-wider uppercase"
           >
             <ArrowLeft size={16} />
             Voltar
-          </button>
+          </a>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
             <div className="bg-card">
