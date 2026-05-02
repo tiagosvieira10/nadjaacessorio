@@ -1,5 +1,5 @@
+import { Category, Product, categories, products } from "@/data/products";
 import { useState } from "react";
-import { products, categories, Category, Product } from "@/data/products";
 import ProductCard from "./ProductCard";
 
 interface CatalogProps {
@@ -21,6 +21,15 @@ const Catalog = ({ onSelectProduct }: CatalogProps) => {
           <h2 className="text-display text-3xl md:text-5xl font-light text-foreground">
             Catálogo
           </h2>
+          <a
+            href="https://drive.google.com/drive/folders/1q9aodnhHo-BRdhjWFy0HLFUUC8JyYK_S"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-4 text-sm tracking-wider uppercase underline hover:opacity-70 transition"
+          >
+            Ver catálogo completo
+          </a>
+
         </div>
 
         <div className="flex justify-center gap-2 md:gap-6 mb-14 flex-wrap">
